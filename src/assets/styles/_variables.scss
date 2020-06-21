@@ -1,0 +1,40 @@
+/* 
+	Global Variables 
+**/
+
+// colors
+$black: #000000;
+$rich-black: #050405;
+$dark-gray: #212121;
+$dark-liver: #50514f;
+$light-gray: #f0f0f0;
+$white: #ffffff;
+
+$red: #92492d;
+$sunset-orange: #f25f5c;
+$mustard: #ffe066;
+$lapis-lazuli: #247ba0;
+$green-sheen: #70c1b3;
+$blue: #00748c;
+
+// sizes
+$canvas-width: 1200px;
+$canvas-height: 630px;
+$canvas-padding: 10px;
+$canvas-padding-double: $canvas-padding * 2;
+
+/* 
+	Context Variables
+**/
+$bg-color: $dark-gray;
+$text-color: $red;
+$bold-color: $blue;
+$title-white: $white;
+
+$header-color: $mustard;
+$border-color: $lapis-lazuli;
+
+$canvas-color: $lapis-lazuli;
+
+$glow-button: $mustard;
+$glow: $mustard;
