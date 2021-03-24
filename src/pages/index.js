@@ -3,10 +3,14 @@ const routes = [
     name: 'initial-page',
     path: '/',
     component: 'src/pages/initialPage.vue',
-    background: 'bg-1',
+    authAccess: 'free'
+  },
+  {
+    name: 'form-page',
+    path: '/form-page',
+    component: 'src/pages/formPage.vue',
     authAccess: 'free'
   }
 ]
 
-// module.exports = routes
 export default routes

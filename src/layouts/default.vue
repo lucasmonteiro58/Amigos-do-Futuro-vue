@@ -1,18 +1,42 @@
 <template>
-  <div>
-    <nuxt class="general" />
+  <div class="stage-wrap">
+    <loading-screen id="loading-screen" />
+    <div :class="background" class="background-image"></div>
+    <nuxt id="stage-container" class="not-ready stage-container" />
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    background() {
+      return this.$store.state.currentBackground || 'bg-menu'
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
-.general {
+#loading-screen {
+  position: absolute;
   width: 1920px;
   height: 1080px;
   @include flex-center;
-  background-image: linear-gradient(red, yellow);
+}
+.stage-container {
+  position: relative;
+  @include flex-center;
+  width: 1920px;
+  height: 1080px;
+}
+
+.background-image {
+  width: 1920px;
+  height: 1080px;
+  position: absolute;
+}
+.not-ready {
+  visibility: hidden;
+  opacity: 0;
 }
 </style>

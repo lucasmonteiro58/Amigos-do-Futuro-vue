@@ -12,11 +12,11 @@ export default function({ store, route, redirect }) {
       return redirect('/login')
     }
     // if it's not staged on session
-    const stage = store.state.stages.filter(
-      (s) => s.path === currentRoute[0].path
-    )
-    if (stage.length && !stage[0].isAvailable) {
-      return redirect('/main')
-    }
+    // const stage = store.state.stages.filter(
+    //   (s) => s.path === currentRoute[0].path
+    // )
+    // if (stage.length && !stage[0].isAvailable) {
+    //   return redirect('/main')
+    // }
   }
 }

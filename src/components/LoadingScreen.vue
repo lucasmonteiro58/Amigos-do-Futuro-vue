@@ -1,8 +1,5 @@
 <template>
   <div class="loading-screen">
-    <div class="logo-loading">
-      <!-- <img class="img" src="@/assets/images/logo-jogo.png" /> -->
-    </div>
     <div class="lds-ellipsis">
       <div></div>
       <div></div>
@@ -14,5 +11,9 @@
 <style lang="scss" scoped>
 .loading-screen {
   position: absolute;
+  @include flex-center;
+  .lds-ellipsis {
+    transform: scale(4);
+  }
 }
 </style>

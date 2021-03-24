@@ -5,6 +5,16 @@ html {
   box-sizing: border-box;
 }
 
+:root {
+  --cursor-padrao: url(../images/pointers/pointerverde.png), default;
+  --cursor-auto: url(../images/pointers/pointerverde.png), auto;
+  --cursor-click: url(../images/pointers/pointerclick.png), pointer;
+  --cursor-block: url(../images/pointers/pointerblock.png), not-allowed;
+  --cursor-text: url(../images/pointers/pointertext.png), text;
+  --cursor-arrastavel: url(../images/pointers/pointerdrag.png), grab;
+  --cursor-arrastando: url(../images/pointers/pointermove.png), grabbing;
+}
+
 *,
 *::before,
 *::after {
@@ -53,7 +63,7 @@ button {
 }
 
 /* I usually expand input and textarea to full-width */
-input[type="text"],
+input[type='text'],
 textarea {
   width: 100%;
 }

@@ -4,7 +4,7 @@ const spriteLogic = [
   new SpritesmithPlugin({
     src: {
       cwd: 'src/assets/images',
-      glob: ['**/*.png', '!stickers/**']
+      glob: ['**/*.png', '!stickers/**', '!pointers/**']
     },
     target: {
       image: 'src/assets/spritesheet.png',

@@ -14,12 +14,12 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
     "animejs": "^3.1.0",
     "file-loader": "^4.2.0",
-    "interactjs": "^1.4.0-rc.13",
     "html2canvas": "^1.0.0-rc.5",
+    "interactjs": "^1.4.0-rc.13",
     "nuxt": "^2.11.0",
     "preload-image-loader": "^1.0.0",
     "url-loader": "^2.2.0",

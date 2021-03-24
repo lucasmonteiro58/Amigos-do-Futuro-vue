@@ -1,8 +1,8 @@
 import routes from './src/pages/index'
-// import spriteLogic from './src/assets/spritesmith.js'
+import spriteLogic from './src/assets/spritesmith.js'
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
    ** Headers of the page
    */
@@ -45,9 +45,8 @@ export default {
    */
   plugins: [
     { src: '~/plugins/components.js', ssr: false },
-    { src: '~/plugins/localStorage.js', ssr: false }
-    // { src: '~/plugins/fixedViewport.js', ssr: false }
-    // { src: '~/plugins/preload.js', mode: 'client' }
+    { src: '~/plugins/localStorage.js', ssr: false },
+    { src: '~/plugins/preload.js', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -97,7 +96,7 @@ export default {
           name: '[path][name].[ext]'
         }
       })
-      // spriteLogic.forEach((s) => config.plugins.push(s))
+      spriteLogic.forEach((s) => config.plugins.push(s))
 
       return config
     }
