@@ -1,7 +1,7 @@
 <template>
   <div class="stage-wrap">
     <loading-screen id="loading-screen" />
-    <div :class="background" class="background-image"></div>
+    <div :class="background" class="background-image">0%</div>
     <nuxt id="stage-container" class="not-ready stage-container" />
   </div>
 </template>
@@ -36,7 +36,6 @@ export default {
   position: absolute;
 }
 .not-ready {
-  visibility: hidden;
-  opacity: 0;
+  display: none;
 }
 </style>

@@ -2,7 +2,7 @@
   <span>
     <div
       v-if="to === '' && nativeType === ''"
-      :class="[classname, { 'has-margin': !noMargin }]"
+      :class="[name, classname, { 'has-margin': !noMargin }]"
       @click="() => !isDisabled && onClick()"
       class="btn"
     ></div>
@@ -58,7 +58,7 @@ export default {
   },
   computed: {
     classname() {
-      return this.isDisabled ? `${this.name}-off` : this.name
+      return 'disabled'
     }
   }
 }

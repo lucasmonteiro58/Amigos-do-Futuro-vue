@@ -1,6 +1,20 @@
 <template>
   <section class="form-container">
-    <div class="left-container"></div>
+    <div class="left-container">
+      <Animation
+        ref="robozin"
+        :id="'robozin-laranja'"
+        :json="require('../assets/animations/robozin/robozin-laranja.json')"
+        :autoplay="true"
+        :loop="true"
+        :fps="10"
+        :ready="ready"
+        :spritesheet="
+          require('../assets/animations/robozin/robozin-laranja.png')
+        "
+        class="robozin-laranja"
+      ></Animation>
+    </div>
     <div class="right-container"></div>
   </section>
 </template>
@@ -8,12 +22,23 @@
 export default {
   mounted() {
     this.$store.commit('changeBackground', 'bg-menu')
+  },
+  methods: {
+    ready() {
+      this.$refs.robozin.play()
+    }
   }
 }
 </script>
 <style lang="scss" scoped>
 .form-container {
   @include flex-center;
+}
+
+.robozin-laranja {
+  position: absolute;
+  top: -85px;
+  transform: scale(0.8);
 }
 
 .left-container {

@@ -1,7 +1,7 @@
 <template>
   <section class="initial-page-container">
     <div class="logo-jogo"></div>
-    <Button name="btn-start"></Button>
+    <Button :on-click="clickStart" name="btn-start"></Button>
     <div class="counter">00000</div>
     <div class="legenda">
       Aqui é a quantidade de Amigos do Futuro que já passaram por aqui.
@@ -12,6 +12,11 @@
 export default {
   mounted() {
     this.$store.commit('changeBackground', 'bg-menu')
+  },
+  methods: {
+    clickStart() {
+      this.$router.push('/form-page')
+    }
   }
 }
 </script>

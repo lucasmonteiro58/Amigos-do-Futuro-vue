@@ -1,5 +1,6 @@
 <template>
   <div class="loading-screen">
+    <div class="percentLogin"></div>
     <div class="lds-ellipsis">
       <div></div>
       <div></div>

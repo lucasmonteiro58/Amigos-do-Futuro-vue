@@ -1,0 +1,1002 @@
+{
+	"frames": [
+		{
+			"filename": "Circulo_Loop_Laranja_00000.png",
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00001.png",
+			"frame": {
+				"x": 783,
+				"y": 1,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00002.png",
+			"frame": {
+				"x": 1565,
+				"y": 1,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00003.png",
+			"frame": {
+				"x": 2347,
+				"y": 1,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00004.png",
+			"frame": {
+				"x": 3129,
+				"y": 1,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00005.png",
+			"frame": {
+				"x": 3911,
+				"y": 1,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00006.png",
+			"frame": {
+				"x": 4693,
+				"y": 1,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00007.png",
+			"frame": {
+				"x": 1,
+				"y": 943,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00008.png",
+			"frame": {
+				"x": 783,
+				"y": 943,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00009.png",
+			"frame": {
+				"x": 1565,
+				"y": 943,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00010.png",
+			"frame": {
+				"x": 2347,
+				"y": 943,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00011.png",
+			"frame": {
+				"x": 3129,
+				"y": 943,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00012.png",
+			"frame": {
+				"x": 3911,
+				"y": 943,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00013.png",
+			"frame": {
+				"x": 4693,
+				"y": 943,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00014.png",
+			"frame": {
+				"x": 1,
+				"y": 1885,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00015.png",
+			"frame": {
+				"x": 783,
+				"y": 1885,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00016.png",
+			"frame": {
+				"x": 1565,
+				"y": 1885,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00017.png",
+			"frame": {
+				"x": 2347,
+				"y": 1885,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00018.png",
+			"frame": {
+				"x": 3129,
+				"y": 1885,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00019.png",
+			"frame": {
+				"x": 3911,
+				"y": 1885,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00020.png",
+			"frame": {
+				"x": 4693,
+				"y": 1885,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00021.png",
+			"frame": {
+				"x": 1,
+				"y": 2827,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00022.png",
+			"frame": {
+				"x": 783,
+				"y": 2827,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00023.png",
+			"frame": {
+				"x": 1565,
+				"y": 2827,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00024.png",
+			"frame": {
+				"x": 2347,
+				"y": 2827,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00025.png",
+			"frame": {
+				"x": 3129,
+				"y": 2827,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00026.png",
+			"frame": {
+				"x": 3911,
+				"y": 2827,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00027.png",
+			"frame": {
+				"x": 4693,
+				"y": 2827,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00028.png",
+			"frame": {
+				"x": 1,
+				"y": 3769,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00029.png",
+			"frame": {
+				"x": 783,
+				"y": 3769,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00030.png",
+			"frame": {
+				"x": 1565,
+				"y": 3769,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00031.png",
+			"frame": {
+				"x": 2347,
+				"y": 3769,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00032.png",
+			"frame": {
+				"x": 3129,
+				"y": 3769,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00033.png",
+			"frame": {
+				"x": 3911,
+				"y": 3769,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00034.png",
+			"frame": {
+				"x": 4693,
+				"y": 3769,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00035.png",
+			"frame": {
+				"x": 1,
+				"y": 4711,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00036.png",
+			"frame": {
+				"x": 783,
+				"y": 4711,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00037.png",
+			"frame": {
+				"x": 1565,
+				"y": 4711,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00038.png",
+			"frame": {
+				"x": 2347,
+				"y": 4711,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00039.png",
+			"frame": {
+				"x": 3129,
+				"y": 4711,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00040.png",
+			"frame": {
+				"x": 3911,
+				"y": 4711,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00041.png",
+			"frame": {
+				"x": 4693,
+				"y": 4711,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00042.png",
+			"frame": {
+				"x": 5475,
+				"y": 1,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00043.png",
+			"frame": {
+				"x": 5475,
+				"y": 943,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00044.png",
+			"frame": {
+				"x": 5475,
+				"y": 1885,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00045.png",
+			"frame": {
+				"x": 5475,
+				"y": 2827,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		},
+		{
+			"filename": "Circulo_Loop_Laranja_00046.png",
+			"frame": {
+				"x": 5475,
+				"y": 3769,
+				"w": 780,
+				"h": 940
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 780,
+				"h": 940
+			},
+			"sourceSize": {
+				"w": 780,
+				"h": 940
+			}
+		}
+	],
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 6256,
+			"h": 5652
+		},
+		"scale": "1"
+	}
+}

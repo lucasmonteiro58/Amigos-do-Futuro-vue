@@ -22,6 +22,9 @@ export default {
     script: [
       {
         src: '/js/fixedviewport.js'
+      },
+      {
+        src: '/js/preloadjs.min.js'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }]
@@ -46,7 +49,7 @@ export default {
   plugins: [
     { src: '~/plugins/components.js', ssr: false },
     { src: '~/plugins/localStorage.js', ssr: false },
-    { src: '~/plugins/preload.js', mode: 'client' }
+    { src: '~/plugins/preload.js', ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules

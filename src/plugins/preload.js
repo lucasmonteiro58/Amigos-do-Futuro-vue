@@ -1,12 +1,11 @@
 'use strict'
 
-const path = require('@/assets/spritesheet.png').default
+const path = require('@/assets/spritesheet.png')
 // const path = null
 
 function runBlock(context) {
   if (!context.isDev)
-    window.onload = (event) => {
-      console.log(event)
+    window.onload = () => {
       const image = new Image()
       image.onload = () => {
         isAssetReady()
@@ -14,8 +13,7 @@ function runBlock(context) {
       image.src = path
     }
   else {
-    window.onload = (event) => {
-      console.log(event)
+    window.onload = () => {
       document.querySelector('.stage-container').classList.remove('not-ready')
       document.querySelector('.loading-screen').classList.add('not-ready')
     }
