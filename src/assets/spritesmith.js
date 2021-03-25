@@ -4,15 +4,19 @@ const spriteLogic = [
   new SpritesmithPlugin({
     src: {
       cwd: 'src/assets/images',
-      glob: ['**/*.png', '!stickers/**', '!pointers/**']
+      glob: ['**/*.png', '!stickers/**', '!pointers/**'],
     },
     target: {
       image: 'src/assets/spritesheet.png',
-      css: 'src/assets/styles/_spritesheet.scss'
+      css: 'src/assets/styles/_spritesheet.scss',
     },
     apiOptions: {
-      cssImageRef: '~@/assets/spritesheet.png'
+      cssImageRef: '~@/assets/spritesheet.png',
+    },
+    spritesmithOptions: {
+      padding: 5
     }
+
   })
 ]
 
