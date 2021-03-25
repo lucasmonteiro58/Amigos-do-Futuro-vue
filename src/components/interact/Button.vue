@@ -5,19 +5,29 @@
       :class="[name, classname, { 'has-margin': !noMargin }]"
       @click="() => !isDisabled && onClick()"
       class="btn"
-    ></div>
+    >
+      <span
+        :style="{ fontSize: fontSize, color: color }"
+        class="content-options"
+        >{{ content }}</span
+      >
+    </div>
     <button
       v-else-if="nativeType !== ''"
       :type="nativeType"
       :class="[classname, { 'has-margin': !noMargin }]"
       class="btn"
-    ></button>
+    >
+      <span class="content-options">{{ content }}</span>
+    </button>
     <nuxt-link
       v-else
       :class="[classname, { 'has-margin': !noMargin }]"
       :to="to"
       class="btn"
-    ></nuxt-link>
+    >
+      <span class="content-options">{{ content }}</span>
+    </nuxt-link>
   </span>
 </template>
 <script>
@@ -29,6 +39,21 @@ export default {
       default() {
         console.warn('give me a function!')
       }
+    },
+    content: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    fontSize: {
+      type: String,
+      required: false,
+      default: '60px'
+    },
+    color: {
+      type: String,
+      required: false,
+      default: 'white'
     },
     name: {
       type: String,
@@ -69,6 +94,8 @@ span {
 }
 
 .btn {
+  @include flex-center;
+  @include bungee;
   &.has-margin {
     margin: 5px;
   }
@@ -79,7 +106,7 @@ span {
     }
 
     &:active {
-      filter: saturate(40%) contrast(190%);
+      filter: saturate(30%) contrast(300%);
     }
   }
 }

@@ -58,6 +58,11 @@
   font-family: norwester, 'Open Sans', Sans, sans-serif;
 }
 
+@mixin bungee() {
+  font-family: bungee, 'Open Sans', Sans, sans-serif;
+  text-transform: uppercase;
+}
+
 @mixin embed_image($url, $width, $height) {
   width: $width;
   height: $height;
