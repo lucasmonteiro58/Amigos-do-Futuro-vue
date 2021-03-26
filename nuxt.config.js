@@ -2,7 +2,7 @@ import routes from './src/pages/index'
 import spriteLogic from './src/assets/spritesmith.js'
 
 export default {
-  mode: 'spa',
+  ssr: false,
   /*
    ** Headers of the page
    */

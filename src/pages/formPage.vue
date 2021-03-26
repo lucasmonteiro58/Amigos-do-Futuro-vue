@@ -1,19 +1,35 @@
 <template>
   <section class="form-container">
     <div class="left-container">
-      <Animation
-        ref="robozin"
-        :id="'robozin-laranja'"
-        :json="require('../assets/animations/robozin/robozin-laranja.json')"
-        :autoplay="true"
-        :loop="true"
-        :fps="10"
-        :ready="ready"
-        :spritesheet="
-          require('../assets/animations/robozin/robozin-laranja.png')
+      <TwoAnimation
+        :show-first="showSpeak"
+        :show-last="showWait"
+        :first-image="
+          require('../assets/animations/robozin/robozin-laranja-falando.png')
+        "
+        :first-json="
+          require('../assets/animations/robozin/robozin-laranja-falando.json')
+        "
+        :last-image="
+          require('../assets/animations/robozin/robozin-laranja-parado.png')
+        "
+        :last-json="
+          require('../assets/animations/robozin/robozin-laranja-parado.json')
         "
         class="robozin-laranja"
-      ></Animation>
+      ></TwoAnimation>
+      <div class="buttons-section">
+        <Button
+          :is-disabled="index === 0"
+          :on-click="prevBtn"
+          name="btn-toggle-arrow-p"
+        ></Button>
+        <Button
+          :is-disabled="index === 3"
+          :on-click="nextBtn"
+          name="btn-toggle-arrow"
+        ></Button>
+      </div>
     </div>
     <div class="right-container">
       <div class="robot-balloon">
@@ -99,15 +115,43 @@ export default {
       userName: '',
       userAge: '',
       userCity: '',
-      userSex: ''
+      userSex: '',
+      isReady: false,
+      showSpeak: true,
+      showWait: false,
+      timeout: null
     }
   },
   mounted() {
     this.$store.commit('changeBackground', 'bg-menu')
+    this.timeout = setTimeout(() => {
+      this.invertAnimation()
+    }, 3000)
   },
   methods: {
-    ready() {
-      this.$refs.robozin.play()
+    invertAnimation() {
+      this.showSpeak = !this.showSpeak
+      this.showWait = !this.showWait
+    },
+    start() {
+      this.showSpeak = true
+      this.showWait = false
+    },
+    prevBtn() {
+      clearInterval(this.timeout)
+      this.index--
+      this.start()
+      this.timeout = setTimeout(() => {
+        this.invertAnimation()
+      }, 3000)
+    },
+    nextBtn() {
+      clearInterval(this.timeout)
+      this.index++
+      this.start()
+      this.timeout = setTimeout(() => {
+        this.invertAnimation()
+      }, 3000)
     },
     clickBoy() {
       this.userSex = 'boy'
@@ -142,6 +186,16 @@ export default {
   width: 40%;
   height: 100%;
   background-color: white;
+
+  .buttons-section {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    width: 40%;
+    transform: scale(0.6);
+  }
 }
 
 .right-container {

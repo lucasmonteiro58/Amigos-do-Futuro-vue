@@ -83,7 +83,8 @@ export default {
   },
   computed: {
     classname() {
-      return 'disabled'
+      if (this.isDisabled) return 'disabled'
+      else return ''
     }
   }
 }
@@ -106,7 +107,20 @@ span {
     }
 
     &:active {
-      filter: saturate(30%) contrast(300%);
+      filter: saturate(40%) contrast(300%);
+    }
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: var(--cursor-block);
+    &:hover {
+      filter: none;
+      transform: scale(1);
+    }
+
+    &:active {
+      filter: none;
     }
   }
 }

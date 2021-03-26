@@ -34,7 +34,7 @@ export default {
     fps: {
       type: Number,
       required: false,
-      default: 100
+      default: 7
     },
     scaleX: {
       type: Number,
@@ -48,7 +48,7 @@ export default {
     },
     autoplay: {
       type: Boolean,
-      default: false,
+      default: true,
       required: false
     },
     loop: {
@@ -75,6 +75,7 @@ export default {
 
   data() {
     return {
+      readyAnimation: false,
       sortingMethods: {
         ascending: 'asc',
         descending: 'desc'
@@ -85,7 +86,7 @@ export default {
         lower: 0,
         upper: undefined,
         running: false,
-        framerate: 20
+        framerate: 10
       },
       sprite: undefined,
       context: undefined,
@@ -133,6 +134,9 @@ export default {
       this.animation.index = Number.isNaN(Number(from))
         ? this.animation.index
         : from
+      this.animation.lower = Number.isNaN(Number(from))
+        ? this.animation.lower
+        : from
       this.animation.upper = Number.isNaN(Number(to))
         ? this.animation.upper
         : to
@@ -159,8 +163,9 @@ export default {
         this.animation.index++
       }
       // framesToConsume
-      if (this.animation.index < this.animation.upper)
+      if (this.animation.index < this.animation.upper) {
         this.timerRequestID = requestAnimationFrame(this.legacyLoop)
+      }
     },
     stop() {
       window.cancelAnimationFrame(this.timerRequestID)
@@ -194,13 +199,12 @@ export default {
       else this.animation.upper = this.animationLength
     },
     animationLoop() {
-      this.render()
-
       setTimeout(() => {
+        this.render()
         this.animation.index++
-        if (this.animation.index < this.animation.upper)
+        if (this.animation.index < this.animation.upper) {
           this.timerRequestID = window.requestAnimationFrame(this.animationLoop)
-        else {
+        } else {
           this.$emit('animationOver', this.animation.index) // emit animationOver
           if (this.loop) {
             this.animation.index = this.animation.lower
