@@ -1,23 +1,15 @@
 <template>
   <section class="form-container">
     <div class="left-container">
-      <TwoAnimation
-        :show-first="showSpeak"
-        :show-last="showWait"
-        :first-image="
-          require('../assets/animations/robozin/robozin-laranja-falando.png')
-        "
-        :first-json="
-          require('../assets/animations/robozin/robozin-laranja-falando.json')
-        "
-        :last-image="
-          require('../assets/animations/robozin/robozin-laranja-parado.png')
-        "
-        :last-json="
-          require('../assets/animations/robozin/robozin-laranja-parado.json')
-        "
+      <Robozin
+        ref="robozinLaranja"
+        :start="robozinIsPlay"
+        :robozin="robozinLaranja"
+        :time="3000"
+        :frame-init="16"
+        :frame-end="35"
         class="robozin-laranja"
-      ></TwoAnimation>
+      ></Robozin>
       <div class="buttons-section">
         <Button
           :is-disabled="index === 0"
@@ -106,52 +98,38 @@
   </section>
 </template>
 <script>
-import { asks } from '../consts/formPage'
+import { asks, robozinLaranja } from '../consts/formPage'
 export default {
   data() {
     return {
       index: 0,
       asks,
+      robozinLaranja,
       userName: '',
       userAge: '',
       userCity: '',
       userSex: '',
       isReady: false,
-      showSpeak: true,
-      showWait: false,
-      timeout: null
+      robozinIsPlay: false
     }
   },
   mounted() {
     this.$store.commit('changeBackground', 'bg-menu')
-    this.timeout = setTimeout(() => {
-      this.invertAnimation()
-    }, 3000)
   },
   methods: {
-    invertAnimation() {
-      this.showSpeak = !this.showSpeak
-      this.showWait = !this.showWait
+    playRobozin() {
+      this.$refs.robozinLaranja.play()
     },
     start() {
-      this.showSpeak = true
-      this.showWait = false
+      this.playRobozin()
     },
     prevBtn() {
-      clearInterval(this.timeout)
       this.index--
       this.start()
-      this.timeout = setTimeout(() => {
-        this.invertAnimation()
-      }, 3000)
     },
     nextBtn() {
-      clearInterval(this.timeout)
       this.index++
       this.start()
-      this.timeout = setTimeout(() => {
-        this.invertAnimation()
-      }, 3000)
     },
     clickBoy() {
       this.userSex = 'boy'

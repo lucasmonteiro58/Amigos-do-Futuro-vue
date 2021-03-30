@@ -20,3 +20,8 @@ export const asks = [
     options: []
   }
 ]
+
+export const robozinLaranja = {
+  falandoSprite: require('../assets/animations/robozin/laranja/spritesheet.png'),
+  falandoJson: require('../assets/animations/robozin/laranja/spritesheet.json')
+}

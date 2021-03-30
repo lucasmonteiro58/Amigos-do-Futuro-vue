@@ -34,7 +34,7 @@ export default {
     fps: {
       type: Number,
       required: false,
-      default: 7
+      default: 10
     },
     scaleX: {
       type: Number,
@@ -48,7 +48,7 @@ export default {
     },
     autoplay: {
       type: Boolean,
-      default: true,
+      default: false,
       required: false
     },
     loop: {
@@ -116,7 +116,9 @@ export default {
     }
   },
   created() {
-    this.init()
+    this.$nextTick(() => {
+      this.init()
+    })
   },
   mounted() {},
   methods: {
@@ -126,8 +128,8 @@ export default {
       this.animation.index = this.animation.lower
       this.sprite = new Image()
       this.sprite.src = this.spritesheet
-      this.sprite.onload = ({ sprite }) => {
-        this.spriteInit(sprite)
+      this.sprite.onload = ({ target }) => {
+        this.spriteInit(target)
       }
     },
     play(from, to) {
@@ -199,21 +201,24 @@ export default {
       else this.animation.upper = this.animationLength
     },
     animationLoop() {
-      setTimeout(() => {
+      this.now = Date.now()
+      const delta = this.now - this.then
+      if (delta > 1000 / this.fps) {
+        this.then = this.now - (delta % (1000 / this.fps))
         this.render()
         this.animation.index++
-        if (this.animation.index < this.animation.upper) {
+      }
+      // this.render()
+      // this.animation.index++
+      if (this.animation.index < this.animation.upper) {
+        this.timerRequestID = window.requestAnimationFrame(this.animationLoop)
+      } else {
+        this.$emit('animationOver', this.animation.index) // emit animationOver
+        if (this.loop) {
+          this.animation.index = this.animation.lower
           this.timerRequestID = window.requestAnimationFrame(this.animationLoop)
-        } else {
-          this.$emit('animationOver', this.animation.index) // emit animationOver
-          if (this.loop) {
-            this.animation.index = this.animation.lower
-            this.timerRequestID = window.requestAnimationFrame(
-              this.animationLoop
-            )
-          }
         }
-      }, this.fpsAnimation)
+      }
 
       // framesToConsume
     },
