@@ -43,6 +43,10 @@ hr {
   padding: 0;
 }
 
+body {
+  padding-right: 0px !important;
+}
+
 /*******************
  Lists
  *******************/

@@ -59,6 +59,9 @@ export default {
   mounted() {
     this.play()
   },
+  beforeDestroy() {
+    clearTimeout(this.timeout)
+  },
   methods: {
     play() {
       clearTimeout(this.timeout)
@@ -66,6 +69,9 @@ export default {
       this.showParado = false
       this.$refs.robozinParado.stop()
       this.$refs.robozinFalando.play(2, 18)
+    },
+    clear() {
+      clearTimeout(this.timeout)
     },
     overFalando() {
       this.$refs.robozinFalando.play(2, 18)

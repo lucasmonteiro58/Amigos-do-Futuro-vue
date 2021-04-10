@@ -14,8 +14,8 @@ function runBlock(context) {
     }
   else {
     window.onload = () => {
-      document.querySelector('.stage-container').classList.remove('not-ready')
-      document.querySelector('.loading-screen').classList.add('not-ready')
+      // document.querySelector('.stage-container').classList.remove('not-ready')
+      // document.querySelector('.loading-screen').classList.add('not-ready')
     }
   }
 
@@ -24,8 +24,8 @@ function runBlock(context) {
 
 function isAssetReady() {
   setTimeout(() => {
-    document.querySelector('.stage-container').classList.remove('not-ready')
-    document.querySelector('.loading-screen').classList.add('not-ready')
+    // document.querySelector('.stage-container').classList.remove('not-ready')
+    // document.querySelector('.loading-screen').classList.add('not-ready')
   }, 2400)
 }
 

@@ -25,7 +25,7 @@
     </div>
     <div class="right-container">
       <div class="robot-balloon">
-        <span>{{ asks[index].title }}</span>
+        <span>{{ questionComputed }}</span>
       </div>
       <div v-if="index === 0" class="form">
         <div class="buttons-section">
@@ -95,7 +95,6 @@
           ></Button>
         </div>
       </div>
-      <!-- <input type="text" class="input-box" placeholder="Escreva seu nome" /> -->
     </div>
   </section>
 </template>
@@ -105,7 +104,9 @@ import vSelect from 'vue-select'
 import { asks, robozinLaranja, citys } from '../consts/formPage'
 import popups from '../mixins/popups'
 import 'vue-select/dist/vue-select.css'
+
 Vue.component('v-select', vSelect)
+
 export default {
   mixins: [popups],
   data() {
@@ -113,13 +114,18 @@ export default {
       index: 0,
       asks,
       robozinLaranja,
-      userName: '',
-      userAge: '',
-      userCity: '',
-      userGender: '',
+      userName: this.$store.state.userStatus.userName || '',
+      userAge: this.$store.state.userStatus.userAge || '',
+      userCity: this.$store.state.userStatus.userCity || '',
+      userGender: this.$store.state.userStatus.userGender || '',
       citys,
       isReady: false,
       robozinIsPlay: false
+    }
+  },
+  computed: {
+    questionComputed() {
+      return asks[this.index].title.replace('#user', this.userName)
     }
   },
   mounted() {
@@ -179,23 +185,37 @@ export default {
       this.userGender = 'boy'
       this.index++
       this.$store.commit('changeUserGender', this.userGender)
+      this.start()
     },
     clickGirl() {
       this.userGender = 'girl'
       this.index++
       this.$store.commit('changeUserGender', this.userGender)
+      this.start()
     },
     clickName() {
-      this.index++
-      this.$store.commit('changeUserName', this.userName)
+      if (this.userName) {
+        this.index++
+        this.$store.commit('changeUserName', this.userName)
+        this.start()
+      } else {
+        this.showPopUpError()
+      }
     },
     clickAge() {
-      this.index++
-      this.$store.commit('changeUserAge', this.userAge)
+      if (this.userAge) {
+        this.index++
+        this.$store.commit('changeUserAge', this.userAge)
+        this.start()
+      } else {
+        this.showPopUpError()
+      }
     },
     clickSend() {
       if (this.userCity) {
         this.$store.commit('changeUserCity', this.userCity)
+        console.log(this.$store.state.userStatus)
+        this.$router.push('/region-page')
       } else {
         this.showPopUpError()
       }

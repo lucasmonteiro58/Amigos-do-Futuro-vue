@@ -10,26 +10,62 @@
         :frame-end="35"
         class="robozin-inteiro"
       ></Robozin>
-      <div @click="playRobozin" class="balloon-comment"></div>
+      <div @click="playRobozin" class="balloon-comment">
+        <p v-html="textBallon"></p>
+      </div>
+      <div class="box-regions-left"><p v-html="actualRegion.info"></p></div>
+      <div :class="imageRegion" class="image-region"></div>
     </div>
   </section>
 </template>
 <script>
 import { robozinInteiro } from '../consts'
+import { regions } from '../consts/infoRegionPage'
 
 export default {
   data() {
     return {
       robozinInteiro,
-      robozinIsPlay: false
+      robozinIsPlay: false,
+      regions,
+      city: this.$store.state.userStatus.city || 'Beberibe',
+      textRegion:
+        'Você sabia que o Ceará é dividido em 14 regiões e a sua cidade fica #region ?'
+    }
+  },
+  computed: {
+    actualRegion() {
+      return this.getActualRegion(this.city)
+    },
+    textBallon() {
+      return this.textRegion.replace(
+        '#region',
+        `${this.actualRegion.artigo} <span class="green-text">${this.actualRegion.name}</span>`
+      )
+    },
+    imageRegion() {
+      return 'pc_' + this.actualRegion.id
     }
   },
   mounted() {
+    this.$store.commit('changeBackground', 'bg-menu')
+    this.$store.commit('changeUserRegion', this.actualRegion)
     this.playRobozin()
   },
   methods: {
     playRobozin() {
       this.$refs.robozinInteiro.play()
+    },
+    getActualRegion(city) {
+      for (const r in this.regions) {
+        const cities = this.regions[r].cities
+        for (const c in cities) {
+          if (city === cities[c]) {
+            return this.regions[r]
+          }
+        }
+      }
+      return null
     }
   }
 }
@@ -37,6 +73,8 @@ export default {
 <style lang="scss" scoped>
 .info-region {
   background-color: $green-app;
+  width: 1920px;
+  height: 1080px;
   .box-comment {
     position: relative;
     transform: scale(0.93);
@@ -47,6 +85,37 @@ export default {
   top: 50px;
   right: 70px;
   transform: scale(0.96);
+  @include flex-center;
+  padding: 14px 73px 168px 74px;
+  p {
+    font-size: 52px;
+    line-height: 52px;
+    font-family: exo-bold;
+    text-align: left;
+  }
+}
+
+.image-region {
+  position: absolute;
+  right: 265px;
+  top: 500px;
+  transform: scale(1.8);
+}
+
+.box-regions-left {
+  position: absolute;
+  top: 500px;
+  right: 613px;
+
+  p {
+    font-size: 30px;
+    text-align: center;
+    padding-right: 20px;
+    padding-top: 10px;
+    br {
+      margin-top: -10px;
+    }
+  }
 }
 .robozin-inteiro {
   position: absolute;

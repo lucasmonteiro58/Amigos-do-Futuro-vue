@@ -5,7 +5,8 @@ export const state = () => ({
     gender: '',
     age: '',
     city: ''
-  }
+  },
+  userRegion: {}
 })
 
 export const mutations = {
@@ -23,5 +24,8 @@ export const mutations = {
   },
   changeUserCity(state, newState) {
     state.userStatus.name = newState
+  },
+  changeUserRegion(state, newState) {
+    state.userRegion = newState
   }
 }
