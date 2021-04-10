@@ -16,6 +16,7 @@
 </template>
 <script>
 import { robozinInteiro } from '../consts'
+
 export default {
   data() {
     return {

@@ -32,12 +32,14 @@
           <Button
             :content="asks[index].options[0]"
             :on-click="clickBoy"
+            :class="{ active: userGender !== 'boy' && userGender }"
             class="btn-form"
             name="btn-action-orange"
           ></Button>
           <Button
             :content="asks[index].options[1]"
             :on-click="clickGirl"
+            :class="{ active: userGender !== 'girl' && userGender }"
             class="btn-form"
             name="btn-action-orange"
           ></Button>
@@ -78,12 +80,12 @@
         </div>
       </div>
       <div v-else-if="index === 3" class="form">
-        <input
+        <v-select
           v-model="userCity"
-          type="text"
-          class="input-box"
+          :options="citys"
+          class="style-chooser input-box"
           placeholder="Digite sua cidade"
-        />
+        ></v-select>
         <div class="buttons-section">
           <Button
             :on-click="clickSend"
@@ -98,8 +100,14 @@
   </section>
 </template>
 <script>
-import { asks, robozinLaranja } from '../consts/formPage'
+import Vue from 'vue'
+import vSelect from 'vue-select'
+import { asks, robozinLaranja, citys } from '../consts/formPage'
+import popups from '../mixins/popups'
+import 'vue-select/dist/vue-select.css'
+Vue.component('v-select', vSelect)
 export default {
+  mixins: [popups],
   data() {
     return {
       index: 0,
@@ -108,7 +116,8 @@ export default {
       userName: '',
       userAge: '',
       userCity: '',
-      userSex: '',
+      userGender: '',
+      citys,
       isReady: false,
       robozinIsPlay: false
     }
@@ -128,24 +137,69 @@ export default {
       this.start()
     },
     nextBtn() {
-      this.index++
-      this.start()
+      switch (this.index) {
+        case 0:
+          if (this.userGender) {
+            this.index++
+            this.start() // iniciar animação
+          } else {
+            this.showPopUpError()
+          }
+          break
+        case 1:
+          if (this.userName) {
+            this.index++
+            this.start() // iniciar animação
+          } else {
+            this.showPopUpError()
+          }
+          break
+        case 2:
+          if (this.userAge) {
+            this.index++
+            this.start() // iniciar animação
+          } else {
+            this.showPopUpError()
+          }
+          break
+        case 3:
+          if (this.userCity) {
+            this.index++
+            this.start() // iniciar animação
+          } else {
+            this.showPopUpError()
+          }
+          break
+
+        default:
+          break
+      }
     },
     clickBoy() {
-      this.userSex = 'boy'
+      this.userGender = 'boy'
       this.index++
+      this.$store.commit('changeUserGender', this.userGender)
     },
     clickGirl() {
-      this.userSex = 'girl'
+      this.userGender = 'girl'
       this.index++
+      this.$store.commit('changeUserGender', this.userGender)
     },
     clickName() {
       this.index++
+      this.$store.commit('changeUserName', this.userName)
     },
     clickAge() {
       this.index++
+      this.$store.commit('changeUserAge', this.userAge)
     },
-    clickSend() {}
+    clickSend() {
+      if (this.userCity) {
+        this.$store.commit('changeUserCity', this.userCity)
+      } else {
+        this.showPopUpError()
+      }
+    }
   }
 }
 </script>
@@ -210,6 +264,11 @@ export default {
         text-transform: initial;
       }
     }
+  }
+}
+.btn-form {
+  &.active {
+    filter: opacity(0.4);
   }
 }
 </style>

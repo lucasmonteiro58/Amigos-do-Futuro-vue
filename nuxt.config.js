@@ -63,7 +63,13 @@ export default {
    */
   modules: [
     // Doc: https://buefy.github.io/#/documentation
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    [
+      'vue-sweetalert2/nuxt',
+      {
+        confirmButtonColor: '#337ab7'
+      }
+    ]
   ],
   /*
    ** Style Resources configuration

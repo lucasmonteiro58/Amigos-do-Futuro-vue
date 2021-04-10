@@ -14,307 +14,57 @@ body {
   @include sprites($spritesheet-sprites);
 }
 
-h2 {
-  margin-top: 1em;
-  padding-top: 1em;
-}
-
-p {
-  text-align: left;
-}
-
-.header {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  @include flex-around;
-}
-
-.content {
-  height: 80%;
-}
-
-.flex {
-  @include flex-center;
-
-  &.col-flow {
-    flex-direction: column;
-  }
-}
-
-.title {
-  font-size: 4em;
-  color: $text-color;
-  text-shadow: 0px 4px 0px #000000;
-}
-
-li {
-  margin: 3px;
-  min-width: 40px;
-
-  &[href] {
-    color: $border-color;
-    border: 3px solid $border-color;
-    background-color: transparent;
-    padding: 10px 15px;
-    cursor: var(--cursor-click);
-    transition: 0.1s ease-in-out;
-
-    &:hover {
-      color: $header-color;
-      background-color: $border-color;
-    }
-  }
-}
-
-.page-transition {
-  transition: all 0.1s ease-in-out;
-}
-
-.page-enter {
-  opacity: 0;
-}
-
-.backdrop {
-  @include fill-canvas;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.8) 99%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
-}
-
 [class^='btn'] {
   cursor: var(--cursor-click);
 }
 
-.red-point {
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  background-color: red;
+//-----------------style V-SELECT
+
+.style-chooser .vs__search::placeholder,
+.style-chooser .vs__dropdown-toggle,
+.style-chooser .vs__dropdown-menu {
+  border: none;
+  font-family: exo, 'Open Sans', Sans, sans-serif;
+  text-align: center;
+  text-transform: initial;
+  margin-top: 16px;
 }
 
-.size-small {
-  .avatar-mask__position {
-    border-radius: 30%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    width: 194px;
-    height: 194px;
-    position: absolute;
-    top: 32px;
-    left: 30px;
-  }
-
-  .dialogue-avatar-text__position {
-    padding: 90px 20px 70px 260px;
-  }
-
-  .arrow-container__position {
-    position: absolute;
-    bottom: 70px;
-    right: 50px;
-  }
-
-  .avatar-name__position {
-    font-size: 34px;
-    position: absolute;
-    bottom: 35px;
-    left: 30px;
-  }
+.style-chooser .vs__search::placeholder {
+  opacity: 0.7;
 }
 
-.size-big {
-  margin-bottom: 20px;
-
-  .dialogue-avatar-text__position {
-    padding: 100px 50px 30px 50px;
-  }
-
-  .arrow-container__position {
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-  }
-
-  .avatar-name__position {
-    font-size: 34px;
-    position: absolute;
-    top: 10px;
-    left: 77px;
-
-    &.inverted {
-      right: 77px;
-      left: unset;
-    }
-  }
+.vs__selected-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-// Animation de Loading
-body {
-  .loading-screen {
-    position: absolute;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    .logo-loading {
-      -webkit-animation: scale-in-out-center 10s ease -0.5s infinite;
-      animation: scale-in-out-center 10s both ease -0.5s infinite;
-
-      .img {
-        -webkit-animation: jello-horizontal 10s linear -0.5s infinite;
-        animation: jello-horizontal 10s linear -0.5s infinite;
-      }
-    }
-
-    .lds-ellipsis {
-      display: inline-block;
-      position: relative;
-      width: 64px;
-      height: 64px;
-
-      div {
-        position: absolute;
-        top: 27px;
-        width: 11px;
-        height: 11px;
-        border-radius: 50%;
-        background: transparentize(white, 0.3);
-        animation-timing-function: cubic-bezier(0, 1, 1, 0);
-
-        &:nth-child(1) {
-          left: 6px;
-          animation: lds-ellipsis1 1.5s infinite;
-          background-color: #43ad83;
-        }
-
-        &:nth-child(2) {
-          left: 26px;
-          animation: lds-ellipsis2 1.5s infinite;
-          background-color: #f74f25;
-        }
-
-        &:nth-child(3) {
-          left: 46px;
-          animation: lds-ellipsis3 1.5s infinite;
-          background-color: #3e6dac;
-        }
-
-        &:nth-child(4) {
-          left: 66px;
-          animation: lds-ellipsis4 1.5s infinite;
-          background-color: #f28f26;
-        }
-      }
-    }
-  }
+.vs__selected {
+  position: absolute;
 }
 
-@keyframes lds-ellipsis1 {
-  0% {
-    transform: scale(1);
-  }
-
-  20% {
-    transform: scale(1.5);
-  }
-
-  40% {
-    transform: scale(1);
-  }
-
-  60% {
-    transform: scale(1);
-  }
-
-  80% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+.vs__search:focus {
+  text-align: center;
 }
 
-@keyframes lds-ellipsis2 {
-  0% {
-    transform: scale(1);
-  }
-
-  20% {
-    transform: scale(1);
-  }
-
-  40% {
-    transform: scale(1.5);
-  }
-
-  60% {
-    transform: scale(1);
-  }
-
-  80% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+.vs__actions {
+  transform: scale(1.4);
 }
 
-@keyframes lds-ellipsis3 {
-  0% {
-    transform: scale(1);
-  }
+//-----------------style V-POPUP
 
-  20% {
-    transform: scale(1);
-  }
-
-  40% {
-    transform: scale(1);
-  }
-
-  60% {
-    transform: scale(1.5);
-  }
-
-  80% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+.swal__confirmBtn {
+  font-size: 24px !important;
+  font-family: bungee, 'Open Sans', Sans, sans-serif;
+  letter-spacing: 1px;
+  cursor: var(--cursor-click) !important;
 }
 
-@keyframes lds-ellipsis4 {
-  0% {
-    transform: scale(1);
-  }
+.swal__icon {
+  cursor: var(--cursor-padrao) !important;
+}
 
-  20% {
-    transform: scale(1);
-  }
-
-  40% {
-    transform: scale(1);
-  }
-
-  60% {
-    transform: scale(1);
-  }
-
-  80% {
-    transform: scale(1.5);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+.swal__popup {
+  border-radius: 10px !important;
 }
