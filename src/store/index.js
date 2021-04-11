@@ -23,7 +23,7 @@ export const mutations = {
     state.userStatus.age = newState
   },
   changeUserCity(state, newState) {
-    state.userStatus.name = newState
+    state.userStatus.city = newState
   },
   changeUserRegion(state, newState) {
     state.userRegion = newState
