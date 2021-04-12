@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     clickStart() {
-      this.$router.push('/form-page')
+      this.$router.push('/form')
     }
   }
 }

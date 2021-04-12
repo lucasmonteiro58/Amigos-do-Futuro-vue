@@ -45,6 +45,7 @@ hr {
 
 body {
   padding-right: 0px !important;
+  overflow: hidden;
 }
 
 /*******************

@@ -115,13 +115,13 @@ export default {
   position: absolute;
   right: 265px;
   top: 477px;
-  transform: scale(1.75);
+  transform: scale(1.65);
 }
 
 .box-regions-left {
   position: absolute;
-  top: 500px;
-  right: 613px;
+  top: 526px;
+  right: 626px;
 
   p {
     font-size: 30px;

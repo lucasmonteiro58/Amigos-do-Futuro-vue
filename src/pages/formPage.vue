@@ -215,7 +215,7 @@ export default {
       if (this.userCity) {
         this.$store.commit('changeUserCity', this.userCity)
         console.log(this.$store.state.userStatus)
-        this.$router.push('/region-page')
+        this.$router.push('/region')
       } else {
         this.showPopUpError()
       }

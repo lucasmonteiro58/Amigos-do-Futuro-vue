@@ -98,7 +98,7 @@ span {
   @include flex-center;
   @include bungee;
   &.has-margin {
-    margin: 5px;
+    //  margin: 5px;
   }
   &:not([class$='-off']) {
     &:hover {

@@ -19,7 +19,7 @@
     "animejs": "^3.1.0",
     "file-loader": "^4.2.0",
     "html2canvas": "^1.0.0-rc.5",
-    "interactjs": "^1.4.0-rc.13",
+    "interactjs": "^1.10.11",
     "nuxt": "^2.11.0",
     "preload-image-loader": "^1.0.0",
     "url-loader": "^2.2.0",
