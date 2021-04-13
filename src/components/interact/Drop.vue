@@ -11,10 +11,6 @@ export default {
       type: [String, Object],
       required: true
     },
-    selectedObjects: {
-      type: Array,
-      required: true
-    },
     replaceOndrop: {
       type: Function,
       required: false,
@@ -50,7 +46,6 @@ export default {
     }
   },
   mounted() {
-    //  const snap = this.initialSnapTarget;
     interact(this.$el).dropzone({
       accept: '.drag-el',
       overlap: 0.75,
@@ -66,27 +61,27 @@ export default {
   },
   methods: {
     ondropactivate(event) {
-      const item = event.relatedTarget
-      item.classList.add('dragging')
+      // const item = event.relatedTarget
+      // item.classList.add('dragging')
     },
     ondropdeactivate(event) {
-      const item = event.relatedTarget
-      item.classList.remove('dragging', 'cannot-drop')
+      // const item = event.relatedTarget
+      // item.classList.remove('dragging', 'cannot-drop')
     },
     ondragenter(event) {
       const item = event.relatedTarget
-      item.classList.add('can-drop')
-      // const elemento = event.relatedTarget.getAttribute('data-transfer')
+      const elemento = event.relatedTarget.getAttribute('data-transfer')
+
+      if (elemento === this.expected) {
+        item.classList.add('can-drop')
+        this.$emit('dropou', event)
+      }
     },
     ondragleave(event) {
       const item = event.relatedTarget
       item.classList.remove('can-drop')
-      item.classList.add('cannot-drop')
-      // const elemento = event.relatedTarget.getAttribute('data-transfer')
     },
-    ondrop() {
-      // console.log(event);
-    },
+    ondrop(event) {},
     resetOptionsState() {
       const element = this.draggableElements[0]
       element.el.draggable({ enabled: true })

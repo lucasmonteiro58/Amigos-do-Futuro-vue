@@ -111,12 +111,9 @@ export default {
       const startX = rect.left + rect.width / 2
       const startY = rect.top + rect.height / 2
 
-      console.log(startX)
-      console.log(startY)
-
       event.target.setAttribute('data-start-x', startX)
       event.target.setAttribute('data-start-y', startY)
-      this.onstartEvent(this.dataTransfer)
+      // this.onstartEvent(this.dataTransfer)
       const target = event.target
       target.classList.add('start-drag')
     },
@@ -124,7 +121,7 @@ export default {
       if (this.sigmoidInterval !== '') clearInterval(this.sigmoidInterval)
       event.target.style.transition = '0.1s'
       event.target.style.transform = this.translation + ' rotate(0deg)'
-      this.onendEvent(this.dataTransfer)
+      // this.onendEvent(this.dataTransfer)
       const target = event.target
       target.classList.remove('start-drag')
     },
