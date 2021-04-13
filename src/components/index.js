@@ -3,6 +3,7 @@ import Button from '@/components/interact/Button.vue'
 import Animation from '@/components/Animation.vue'
 import Robozin from '@/components/Robozin.vue'
 import Sprite from '@/components/Sprite.vue'
+import TipRobozin from '@/components/TipRobozin.vue'
 
 const Components = {
   install: (Vue) => {
@@ -11,6 +12,7 @@ const Components = {
     Vue.component('Animation', Animation)
     Vue.component('Robozin', Robozin)
     Vue.component('Sprite', Sprite)
+    Vue.component('TipRobozin', TipRobozin)
   }
 }
 

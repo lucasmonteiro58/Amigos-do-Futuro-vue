@@ -18,6 +18,7 @@
     >
       <div :class="el.image"></div>
     </Drop>
+    <TipRobozin></TipRobozin>
   </section>
 </template>
 <script>

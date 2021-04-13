@@ -101,7 +101,8 @@
 <script>
 import Vue from 'vue'
 import vSelect from 'vue-select'
-import { asks, robozinLaranja, citys } from '../consts/formPage'
+import { asks, citys } from '../consts/formPage'
+import { robozinLaranja } from '../consts/index'
 import popups from '../mixins/popups'
 import 'vue-select/dist/vue-select.css'
 
