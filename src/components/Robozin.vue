@@ -84,8 +84,8 @@ export default {
       // const frame = this.frameInit + 1
       this.showFalando = false
       this.showParado = true
-      this.$refs.robozinFalando.stop()
-      this.$refs.robozinParado.play(19, 38)
+      if (this.$refs.robozinFalando) this.$refs.robozinFalando.stop()
+      if (this.$refs.robozinFalando) this.$refs.robozinParado.play(19, 38)
     },
     overParado() {
       // const frame = this.frameInit + 1

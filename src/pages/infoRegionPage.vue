@@ -19,7 +19,9 @@
         ></Button>
       </div>
       <div class="box-regions-left"><p v-html="actualRegion.info"></p></div>
-      <div :class="imageRegion" class="image-region"></div>
+      <div class="image-container">
+        <div :class="imageRegion" class="image-region"></div>
+      </div>
       <Button class="btn-toggle-next" name="btn-toggle-next"></Button>
     </div>
   </section>
@@ -111,11 +113,16 @@ export default {
   }
 }
 
-.image-region {
+.image-container {
+  @include flex-center;
+  width: 394px;
+  height: 230px;
   position: absolute;
-  right: 265px;
-  top: 477px;
-  transform: scale(1.65);
+  right: 208px;
+  top: 479px;
+  .image-region {
+    transform: scale(1.2);
+  }
 }
 
 .box-regions-left {

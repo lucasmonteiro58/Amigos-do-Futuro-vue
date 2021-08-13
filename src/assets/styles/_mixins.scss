@@ -54,6 +54,10 @@
   font-family: exo, 'Open Sans', Sans, sans-serif;
 }
 
+@mixin exo-bold() {
+  font-family: exo-bold, 'Open Sans', Sans, sans-serif;
+}
+
 @mixin norwester() {
   font-family: norwester, 'Open Sans', Sans, sans-serif;
 }
@@ -61,6 +65,10 @@
 @mixin bungee() {
   font-family: bungee, 'Open Sans', Sans, sans-serif;
   text-transform: uppercase;
+}
+
+@mixin cursor-click() {
+  cursor: var(--cursor-click);
 }
 
 @mixin embed_image($url, $width, $height) {

@@ -97,9 +97,7 @@ span {
 .btn {
   @include flex-center;
   @include bungee;
-  &.has-margin {
-    //  margin: 5px;
-  }
+  transition: 0.3s;
   &:not([class$='-off']) {
     &:hover {
       filter: saturate(90%) contrast(130%);

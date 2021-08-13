@@ -1,5 +1,6 @@
+import Components from '@/components'
+import Fragment from 'vue-fragment'
 import Vue from 'vue'
 
-import Components from '@/components'
-
 Vue.use(Components)
+Vue.use(Fragment.Plugin)
